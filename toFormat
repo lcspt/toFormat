@@ -54,9 +54,6 @@ if __name__ == '__main__'
 
     path = input('dir:')
     obj = os.scandir(path)
-    for entry in obj :
-        if entry.is_dir() or entry.is_file():
-            print(entry.name)
     conv = mp3_converter(path, (".wav", "flac"), "mp3")
     conv.mp3()
     conv.make_dir()
